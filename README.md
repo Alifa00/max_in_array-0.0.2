@@ -1,67 +1,74 @@
 ```
-#include "stdafx.h" #include "iostream" #include "sstream"
+#include <iostream>
+#include <sstream>
 
-using namespace std;
-
-int main() { int max1, max2, i, a[10], b[10];
-
-for (string string; getline(cin, string); ) {
-	istringstream stream(string);
-	bool failure = false;
-	for (int i = 0; i < 10; ++i) {
-		if (!(stream >> a[i])) {
-			failure = true;
-			break;
-		}
-	}
-
-	max1 = a[1];
-
-	if (!failure) {
-		for (int i = 0; i < 10; ++i) {
-			if (a[i] > max1) {
-				max1 = a[i];
-			}
-		}
-
-		break;
-	}
-	else {
-		cout << "An error has occured while reading numbers from line" << endl;
-	}
-}
-
-for (string string; getline(cin, string); ) {
-	istringstream stream(string);
-	bool failure = false;
-	for (int i = 0; i < 10; ++i) {
-		if (!(stream >> b[i])) {
-			failure = true;
-			break;
-		}
-	}
-
-	max2 = b[1];
-
-	if (!failure) {
-		for (int i = 0; i < 10; ++i) {
-			if (b[i] > max2) {
-				max2 = b[i];
-			}
-		}
-
-		break;
-	}
-	else {
-		cout << "An error has occured while reading numbers from line" << endl;
-	}
-}
-
-cout << max1 + max2 << endl;
-
-system("pause");
-cin.get();
-
-return 0;
+int main()
+{
+	int where=1;
+	bool failure,failure1;
+    		int max,max1;
+    for( std::string string; std::getline( std::cin, string );)
+    {
+    		
+        int numbers[ 10 ];
+        std::istringstream stream( string );
+        switch(where)
+        {
+        case 1:
+          failure = false;
+          for( int i = 0; i < 10; ++i ) 
+          {
+            if( !( stream >> numbers[ i ] ) ) 
+            {
+                failure = true;
+                break;
+            }
+          }
+           max=numbers[0];
+           for( int i = 0; i < 10; ++i )
+           {
+        	    if (numbers[i] > max)
+        	    {
+        		max = numbers[i];
+        	    }
+           }
+               where++;
+               break;
+        case 2:
+        failure1 = false;
+          for( int i = 0; i < 10; ++i ) {
+            if( !( stream >> numbers[ i ] ) ) {
+                failure1 = true;
+                break;
+            }
+           }
+           max1 = numbers[0];
+           for( int i = 0; i < 10; ++i )
+           {
+        	    if (numbers[i] > max1)
+        	    {
+        		max1 = numbers[i];
+        	    }
+           }
+               if( !(failure1) &&! (failure) )
+            {
+       	
+            std::cout<< max + max1;
+            }
+        else
+        {
+            std::cout << "An error has occured while reading numbers from line" << std::endl;
+        }
+        
+               break;
+               
+         
+        }
+       
+        
+        
+    }
+   
+    return 0;   
 }
 ```
