@@ -1,4 +1,4 @@
-```
+
 #include "stdafx.h" #include "iostream" #include "sstream"
 
 using namespace std;
@@ -64,5 +64,4 @@ cin.get();
 
 return 0;
 }
-
 ```
