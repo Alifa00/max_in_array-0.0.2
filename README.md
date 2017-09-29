@@ -1,4 +1,4 @@
-```
+ ```
 #include <iostream>
 #include <sstream>
 
@@ -59,16 +59,7 @@ int main()
         {
             std::cout << "An error has occured while reading numbers from line" << std::endl;
         }
-        
-               break;
-               
-         
-        }
-       
-        
-        
+        }     
     }
-   
-    return 0;   
 }
 ```
