@@ -36,12 +36,14 @@ int main()
                break;
         case 2:
         failure1 = false;
-          for( int i = 0; i < 10; ++i ) {
-            if( !( stream >> numbers[ i ] ) ) {
+          for( int i = 0; i < 10; ++i )
+	  {
+            if( !( stream >> numbers[ i ] ) ) 
+	    {
                 failure1 = true;
                 break;
             }
-           }
+          }
            max1 = numbers[0];
            for( int i = 0; i < 10; ++i )
            {
